@@ -27,7 +27,7 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <h1>adae ${user}</h1>
+               <h1>Hello Struts 2</h1>
             </div>
          </div>
       </div>
