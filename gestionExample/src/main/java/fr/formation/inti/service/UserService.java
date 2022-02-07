@@ -25,10 +25,6 @@ public class UserService implements IUserService{
 		return id;
 	}
 	
-	public static void main(String[] args) {
-		IUserService service = new UserService();
-		
-		service.findByLoginAndPassword("root", "123456");
-	}
+	
 
 }
