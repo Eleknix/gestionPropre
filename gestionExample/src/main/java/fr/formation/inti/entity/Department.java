@@ -26,8 +26,6 @@ public class Department implements java.io.Serializable {
 		this.name = name;
 	}
 
-	
-
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 
@@ -48,7 +46,5 @@ public class Department implements java.io.Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	
 
 }

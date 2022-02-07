@@ -12,7 +12,7 @@ import fr.formation.inti.dao.EmployeeDao;
 import fr.formation.inti.dao.IEmployeeDao;
 import fr.formation.inti.entity.Employee;
 
-@Service("service")
+//@Service("service")
 public class EmployeeService implements IEmployeeService {
 	private final static Log log = LogFactory.getLog(EmployeeService.class);
 	@Autowired
@@ -48,7 +48,12 @@ public class EmployeeService implements IEmployeeService {
 	public List<Employee> findAll() {
 		dao.beginTransaction();
 		List<Employee> list = dao.findAll();
-		dao.commitTransaction();
+		dao.close();
 		return list;
+	}
+
+	public void setDao2(IEmployeeDao dao) {
+		log.info("----->SetDao");
+		this.dao = dao;
 	}
 }

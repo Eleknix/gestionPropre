@@ -28,7 +28,7 @@ public class Employee {
 	private String lastName;
 	@Column(name = "start_date")
 	private Date startDate;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "dept_id", nullable = false)
 	private Department department;
@@ -78,8 +78,6 @@ public class Employee {
 //		return subordonnees;
 //	}
 
-	
-
 	public Set<Employee> getSubordonnees() {
 		return subordonnees;
 	}
@@ -91,8 +89,6 @@ public class Employee {
 	public void setManager(Employee manager) {
 		this.manager = manager;
 	}
-
-	
 
 	public Department getDepartment() {
 		return department;
